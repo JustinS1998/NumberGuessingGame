@@ -1,14 +1,11 @@
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max) + 1;
-}
-
-const randomNumber = getRandomInt(100);
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
 const result = document.querySelector('.result');
 const button = document.querySelector('button');
+const guessField = document.querySelector('.guessField');
 
 function checkGuess() {
-    alert('Placeholder');
+    result.textContent = Number(guessField.value);
 }
 
 button.addEventListener('click', checkGuess);
