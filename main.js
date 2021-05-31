@@ -1,12 +1,14 @@
 function getRandomInt(max) {
-    return Math.ceil(Math.random() * max);
+    return Math.floor(Math.random() * max) + 1;
 }
 
-const myNum = getRandomInt(100);
-console.log(myNum);
+const randomNumber = getRandomInt(100);
 
-const button = document.querySelector('button');
 const result = document.querySelector('.result');
-button.onclick = function() {
-    result.textContent = myNum;
+const button = document.querySelector('button');
+
+function checkGuess() {
+    alert('Placeholder');
 }
+
+button.addEventListener('click', checkGuess);
