@@ -5,7 +5,14 @@ const button = document.querySelector('button');
 const guessField = document.querySelector('.guessField');
 
 function checkGuess() {
-    result.textContent = Number(guessField.value);
+    let guess = Number(guessField.value);
+    if (guess === randomNumber) {
+        result.textContent = 'Correct';
+    } else if (guess > randomNumber) {
+        result.textContent = 'Too high';
+    } else if (guess < randomNumber) {
+        result.textContent = 'Too low';
+    }
 }
 
 button.addEventListener('click', checkGuess);
